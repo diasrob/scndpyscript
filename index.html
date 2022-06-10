@@ -9,12 +9,17 @@
 </head>
 
 <body>
+    <py-script>
+        from js import console
+        def cria_task(*ags, **kags):
+            console.log('teste')
+    </py-script>
   <main>
     <div class="container">
       <h3>Lista de Tarefas</h3>
       <input id="input_task" type="text" placeholder="Digite uma tarefa" class="form-control">
       <br>
-      <button id="btn_task" type="submit" class="btn btn-success">Enviar</button>
+      <button id="btn_task" type="submit" class="btn btn-success" pys-onClick="cria_tasks">Enviar</button>
       <hr></hr>
       
       <div class="row">
