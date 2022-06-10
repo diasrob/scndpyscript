@@ -11,10 +11,17 @@
 <body>
     <py-script>
         from js import console
+        from datetime import datetime
+        tasks = []
+        
         def cria_task(*ags, **kags):
             input_task = Element('input_task')
-            task = input_task.element.value
-            console.log(task)
+            task = input_task.element.value            
+            dict_task = {'task-id': len(task),
+                         'content': task,
+                         'data': datetime.now(),
+                         'status': 'C'}
+             console.log(dict_task)
     </py-script>
   <main>
     <div class="container">
