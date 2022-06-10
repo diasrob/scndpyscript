@@ -12,7 +12,9 @@
     <py-script>
         from js import console
         def cria_task(*ags, **kags):
-            console.log('teste')
+            input_task = Element('input_task')
+            task = input_task.element.value
+            console.log(task)
     </py-script>
   <main>
     <div class="container">
